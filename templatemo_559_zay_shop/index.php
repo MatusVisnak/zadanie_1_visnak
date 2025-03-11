@@ -326,11 +326,11 @@ https://templatemo.com/tm-559-zay-shop
 
 
     <?php
-     $file_path = "casti/footer.php"; 
-    if(!include($file_path)) {     
-        echo"Failed to include $file_path";
-    }
-    ?>
+  $file_path = "casti/footer.php";
+ if(!include($file_path)) {
+     echo"Failed to include $file_path";
+}
+ ?>
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
