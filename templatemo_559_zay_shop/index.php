@@ -1,3 +1,14 @@
+<?php
+// Funkcia Pozdrav(), ktorá načíta JSON a vypíše pozdrav
+function Pozdrav() {
+    // Načítanie JSON súboru
+    $data = json_decode(file_get_contents('pozdrav.json'), true);
+    
+    // Vypísanie pozdravu
+    echo $data['pozdrav'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -90,7 +101,7 @@ https://templatemo.com/tm-559-zay-shop
                         </div>
                         <div class="col-lg-6 mb-0 d-flex align-items-center">
                             <div class="text-align-left align-self-center">
-                                <h1 class="h1 text-success"><b>Zay</b> eCommerce</h1>
+                                <h1 class="h1 text-success"><b><?php Pozdrav(); ?></b> </h1>
                                 <h3 class="h2">Tiny and Perfect eCommerce Template</h3>
                                 <p>
                                     Zay Shop is an eCommerce HTML5 CSS template with latest version of Bootstrap 5 (beta 1). 
@@ -157,7 +168,9 @@ https://templatemo.com/tm-559-zay-shop
     <section class="container py-5">
         <div class="row text-center pt-3">
             <div class="col-lg-6 m-auto">
-                <h1 class="h1">Categories of The Month</h1>
+                <h1 class="h1"><?php Pozdrav(); ?></h1>
+                <?php Pozdrav(); ?>
+
                 <p>
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
